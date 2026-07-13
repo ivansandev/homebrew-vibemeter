@@ -1,6 +1,15 @@
 .DS_Store
 DerivedData/
 build/
+.env
+.env.*
+auth.json
+credentials.json
+secrets.*
+*.key
+*.pem
+*.p12
+*.mobileprovision
 *.xcuserstate
 xcuserdata/
 *.ipa
