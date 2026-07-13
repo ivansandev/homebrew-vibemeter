@@ -1,4 +1,4 @@
-cask "vibemeter" do
+cask "vibemeter-ai-usage" do
   version "0.1.0"
   sha256 "af8423bc045c74f5ecc73b0f060992b031e2450b2899a1d034c508a4bf7a11be"
 

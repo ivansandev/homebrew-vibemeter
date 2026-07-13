@@ -68,7 +68,7 @@ brew tap ivansandev/vibemeter
 This adds the `ivansandev/homebrew-vibemeter` repository as a custom Homebrew tap.
 
 ```sh
-brew install --cask vibemeter
+brew install --cask vibemeter-ai-usage
 ```
 
 This downloads the notarized VibeMeter app and installs it in `/Applications`.
