@@ -1,0 +1,80 @@
+name: Release VibeMeter
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "Semantic version without the v prefix"
+        required: true
+        default: "0.1.0"
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: macos-15
+    env:
+      VERSION: ${{ inputs.version }}
+      KEYCHAIN: ${{ runner.temp }}/vibemeter-signing.keychain-db
+      DERIVED_DATA: ${{ runner.temp }}/DerivedData
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate version
+        run: |
+          [[ "$VERSION" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]
+          test ! "$(git tag -l "v$VERSION")"
+
+      - name: Import Developer ID certificate
+        env:
+          P12_BASE64: ${{ secrets.DEVELOPER_ID_APPLICATION_P12_BASE64 }}
+          P12_PASSWORD: ${{ secrets.DEVELOPER_ID_APPLICATION_PASSWORD }}
+        run: |
+          echo "$P12_BASE64" | base64 --decode > "$RUNNER_TEMP/developer-id.p12"
+          security create-keychain -p "$P12_PASSWORD" "$KEYCHAIN"
+          security set-keychain-settings -lut 21600 "$KEYCHAIN"
+          security unlock-keychain -p "$P12_PASSWORD" "$KEYCHAIN"
+          security import "$RUNNER_TEMP/developer-id.p12" -k "$KEYCHAIN" -P "$P12_PASSWORD" -T /usr/bin/codesign
+          security set-key-partition-list -S apple-tool:,apple: -s -k "$P12_PASSWORD" "$KEYCHAIN"
+          security list-keychains -d user -s "$KEYCHAIN" login.keychain-db
+
+      - name: Test
+        run: |
+          xcodebuild -project VibeMeter.xcodeproj -scheme VibeMeter -derivedDataPath "$DERIVED_DATA" CODE_SIGNING_ALLOWED=NO test
+
+      - name: Build universal release
+        run: |
+          xcodebuild -project VibeMeter.xcodeproj -scheme VibeMeter -configuration Release -derivedDataPath "$DERIVED_DATA" ARCHS="arm64 x86_64" ONLY_ACTIVE_ARCH=NO CODE_SIGNING_ALLOWED=NO build
+
+      - name: Sign, notarize, and staple
+        env:
+          SIGNING_IDENTITY: ${{ secrets.DEVELOPER_ID_APPLICATION_NAME }}
+          APPLE_ID: ${{ secrets.APPLE_ID }}
+          APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
+          APPLE_PASSWORD: ${{ secrets.APPLE_APP_SPECIFIC_PASSWORD }}
+        run: |
+          APP="$DERIVED_DATA/Build/Products/Release/VibeMeter.app"
+          /usr/libexec/PlistBuddy -c "Set :CFBundleShortVersionString $VERSION" "$APP/Contents/Info.plist"
+          codesign --force --deep --options runtime --timestamp --sign "$SIGNING_IDENTITY" "$APP"
+          codesign --verify --deep --strict --verbose=2 "$APP"
+          ditto -c -k --keepParent "$APP" "$RUNNER_TEMP/VibeMeter-notary.zip"
+          xcrun notarytool submit "$RUNNER_TEMP/VibeMeter-notary.zip" --apple-id "$APPLE_ID" --password "$APPLE_PASSWORD" --team-id "$APPLE_TEAM_ID" --wait
+          xcrun stapler staple "$APP"
+          ditto -c -k --sequesterRsrc --keepParent "$APP" "VibeMeter-$VERSION.zip"
+
+      - name: Publish GitHub release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "v$VERSION" "VibeMeter-$VERSION.zip" --title "VibeMeter $VERSION" --generate-notes
+
+      - name: Update Homebrew Cask
+        run: |
+          SHA="$(shasum -a 256 "VibeMeter-$VERSION.zip" | awk '{print $1}')"
+          ruby -pi -e "gsub(/version \"[^\"]+\"/, 'version \"$VERSION\"'); gsub(/sha256 (:[a-z_]+|\"[0-9a-f]+\")/, 'sha256 \"$SHA\"')" Casks/vibemeter.rb
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add Casks/vibemeter.rb
+          git diff --cached --quiet || git commit -m "Update VibeMeter cask to $VERSION"
+          git push origin HEAD:${{ github.event.repository.default_branch }}

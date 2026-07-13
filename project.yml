@@ -1,0 +1,59 @@
+name: VibeMeter
+options:
+  bundleIdPrefix: dev.ivansandev
+  deploymentTarget:
+    macOS: "15.0"
+  xcodeVersion: "26.0"
+settings:
+  base:
+    SWIFT_VERSION: "6.0"
+    MACOSX_DEPLOYMENT_TARGET: "15.0"
+    MARKETING_VERSION: "0.1.0"
+    CURRENT_PROJECT_VERSION: "1"
+    CODE_SIGN_STYLE: Automatic
+targets:
+  VibeMeter:
+    type: application
+    platform: macOS
+    sources:
+      - path: VibeMeter
+    info:
+      path: VibeMeter/Info.plist
+      properties:
+        CFBundleDisplayName: VibeMeter
+        CFBundleShortVersionString: "$(MARKETING_VERSION)"
+        CFBundleVersion: "$(CURRENT_PROJECT_VERSION)"
+        LSMinimumSystemVersion: "$(MACOSX_DEPLOYMENT_TARGET)"
+        LSUIElement: true
+        NSHumanReadableCopyright: "Copyright © 2026 Ivan Sandev. MIT licensed."
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: dev.ivansandev.vibemeter
+        PRODUCT_NAME: VibeMeter
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        ENABLE_HARDENED_RUNTIME: YES
+        GENERATE_INFOPLIST_FILE: NO
+    dependencies:
+      - sdk: Security.framework
+      - sdk: ServiceManagement.framework
+      - sdk: UserNotifications.framework
+  VibeMeterTests:
+    type: bundle.unit-test
+    platform: macOS
+    sources:
+      - path: VibeMeterTests
+    dependencies:
+      - target: VibeMeter
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: dev.ivansandev.vibemeter.tests
+        GENERATE_INFOPLIST_FILE: YES
+schemes:
+  VibeMeter:
+    build:
+      targets:
+        VibeMeter: all
+        VibeMeterTests: [test]
+    test:
+      targets:
+        - VibeMeterTests

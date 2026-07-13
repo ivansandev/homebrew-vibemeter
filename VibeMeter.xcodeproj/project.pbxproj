@@ -1,0 +1,553 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		03C3E3AAE6CA1F2EB8F09D3B /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDB3184D17032D8B3FDE79F /* AppSettings.swift */; };
+		122B677523A662348A68A6A7 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A1F0EF09312407899AC4B34 /* UserNotifications.framework */; };
+		1F5B930E33F941E140FFFBCD /* UsageModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DBCE43197F89084DF9E59B /* UsageModels.swift */; };
+		2CF39F2EEFC2BBB4A8354F71 /* UsageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1503876C68403CAAB111153 /* UsageProvider.swift */; };
+		37DE93EAFC473071DCE04BA4 /* ClaudeUsageResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE1DDC0676C2424AD9A941F /* ClaudeUsageResponseTests.swift */; };
+		48F3DD405C83783A99D4EA4C /* CLILocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C1E8561810DD79D764113D /* CLILocator.swift */; };
+		5B53BF3A4099AD219110263B /* UsageModelsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D2E36DD59FB1B8FE955752 /* UsageModelsTests.swift */; };
+		626145AD4E4D1017B44E942B /* UsageAlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E2EDE182BB26983B6D5BF6E /* UsageAlertManager.swift */; };
+		6443B774EA0C57A85734383F /* VibeMeterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFB3CA44EF2347B0B8E7A64 /* VibeMeterApp.swift */; };
+		64BD31BAF4C179ADD0340886 /* CLILocatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E541D77C0306329D9F5CF8 /* CLILocatorTests.swift */; };
+		67F4513B76859BDDD663F6C5 /* UsageCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A54F4DA89FECC92990D9D5 /* UsageCoordinator.swift */; };
+		73DE1D4A0CE7C02204147B1C /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B03D020196783B1ED7DCFF2E /* ServiceManagement.framework */; };
+		749FDE30308C68B65539E0EB /* UsageWindowRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B2A2C1FD4CE96DDD9609BE /* UsageWindowRow.swift */; };
+		819B7A58B22AEB7F9E22A5EA /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391B9D4C0C94110960B66C27 /* SettingsView.swift */; };
+		8C394307C1424AE1AB5F3537 /* LiveProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B73D7CE0E760088D8302A2B /* LiveProviderTests.swift */; };
+		8D3087318B6CA87EEFC0E2F8 /* ProviderCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965B3DF8BB3988E0AD8CD1B2 /* ProviderCardView.swift */; };
+		C0AED0D58BF09BA9C4777C78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA252968942E8CF4DB012AEB /* Assets.xcassets */; };
+		C28C9653687118ACE0A11282 /* SnapshotStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF149C02EDD09170913CBAD7 /* SnapshotStore.swift */; };
+		C31C70617B2D0DC314FF1202 /* ClaudeUsageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D731409A1192809EAB3D7F60 /* ClaudeUsageProvider.swift */; };
+		C608E0B188B0956C8061B1B1 /* CodexUsageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D68398CEE8650453EF5F9AB /* CodexUsageProvider.swift */; };
+		C643CF13D918FCDC68227E58 /* CodexUsageResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8352BB1AA5EF40116E7304 /* CodexUsageResponseTests.swift */; };
+		EEA7BA5D30135B70BFF8287B /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A14E461D3BDDED51672F397C /* Security.framework */; };
+		EED4A246A58D30EF1BDBD6D0 /* KeychainCredentialReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D421BDC2896FEF7C899F0047 /* KeychainCredentialReader.swift */; };
+		F49E3187FEC556AA72331EAF /* CodexRPCProcess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C36F7BFB44E806F9CA51FCA /* CodexRPCProcess.swift */; };
+		F90F9ED8A20C6AF73F17D1BB /* MenuBarContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C7A570605A1F136835CDAB /* MenuBarContentView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7CD5AEAC77CE044ED67B0283 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 154DF87AFB963C54CFADB1D9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 228FD5EA55457DC688A60855;
+			remoteInfo = VibeMeter;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1524D513A423821D19E5EEBD /* VibeMeter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VibeMeter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		27D2E36DD59FB1B8FE955752 /* UsageModelsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageModelsTests.swift; sourceTree = "<group>"; };
+		30DBCE43197F89084DF9E59B /* UsageModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageModels.swift; sourceTree = "<group>"; };
+		391B9D4C0C94110960B66C27 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		3A7301B57D4797F0ECFD381A /* VibeMeterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VibeMeterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B73D7CE0E760088D8302A2B /* LiveProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveProviderTests.swift; sourceTree = "<group>"; };
+		6E2EDE182BB26983B6D5BF6E /* UsageAlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageAlertManager.swift; sourceTree = "<group>"; };
+		7D68398CEE8650453EF5F9AB /* CodexUsageProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodexUsageProvider.swift; sourceTree = "<group>"; };
+		7E8352BB1AA5EF40116E7304 /* CodexUsageResponseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodexUsageResponseTests.swift; sourceTree = "<group>"; };
+		8A1F0EF09312407899AC4B34 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		965B3DF8BB3988E0AD8CD1B2 /* ProviderCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderCardView.swift; sourceTree = "<group>"; };
+		9C36F7BFB44E806F9CA51FCA /* CodexRPCProcess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodexRPCProcess.swift; sourceTree = "<group>"; };
+		A14E461D3BDDED51672F397C /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		AA252968942E8CF4DB012AEB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AF149C02EDD09170913CBAD7 /* SnapshotStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapshotStore.swift; sourceTree = "<group>"; };
+		B03D020196783B1ED7DCFF2E /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
+		B1503876C68403CAAB111153 /* UsageProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageProvider.swift; sourceTree = "<group>"; };
+		B1C7A570605A1F136835CDAB /* MenuBarContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarContentView.swift; sourceTree = "<group>"; };
+		C0C1E8561810DD79D764113D /* CLILocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLILocator.swift; sourceTree = "<group>"; };
+		CA469E269F48B0785B20D9E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		CAFB3CA44EF2347B0B8E7A64 /* VibeMeterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VibeMeterApp.swift; sourceTree = "<group>"; };
+		D1A54F4DA89FECC92990D9D5 /* UsageCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageCoordinator.swift; sourceTree = "<group>"; };
+		D421BDC2896FEF7C899F0047 /* KeychainCredentialReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainCredentialReader.swift; sourceTree = "<group>"; };
+		D731409A1192809EAB3D7F60 /* ClaudeUsageProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClaudeUsageProvider.swift; sourceTree = "<group>"; };
+		E7E541D77C0306329D9F5CF8 /* CLILocatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLILocatorTests.swift; sourceTree = "<group>"; };
+		EBDB3184D17032D8B3FDE79F /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
+		EBE1DDC0676C2424AD9A941F /* ClaudeUsageResponseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClaudeUsageResponseTests.swift; sourceTree = "<group>"; };
+		F6B2A2C1FD4CE96DDD9609BE /* UsageWindowRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageWindowRow.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7924F1620CAD1B4504B7ECD2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EEA7BA5D30135B70BFF8287B /* Security.framework in Frameworks */,
+				73DE1D4A0CE7C02204147B1C /* ServiceManagement.framework in Frameworks */,
+				122B677523A662348A68A6A7 /* UserNotifications.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0615D57E050400827F1BD31E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				EBDB3184D17032D8B3FDE79F /* AppSettings.swift */,
+				C0C1E8561810DD79D764113D /* CLILocator.swift */,
+				9C36F7BFB44E806F9CA51FCA /* CodexRPCProcess.swift */,
+				D421BDC2896FEF7C899F0047 /* KeychainCredentialReader.swift */,
+				AF149C02EDD09170913CBAD7 /* SnapshotStore.swift */,
+				6E2EDE182BB26983B6D5BF6E /* UsageAlertManager.swift */,
+				D1A54F4DA89FECC92990D9D5 /* UsageCoordinator.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		2D30B629213341DFD25D3C49 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				30DBCE43197F89084DF9E59B /* UsageModels.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4C0B004508A3295A54449422 = {
+			isa = PBXGroup;
+			children = (
+				799481C68E8EF85CA43AEC87 /* VibeMeter */,
+				A12540925DD8B7FCE7E53E4F /* VibeMeterTests */,
+				D7FA9584940F21B6E833B3DB /* Frameworks */,
+				E5CB89F2E4F7376BDEAAC2B6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		799481C68E8EF85CA43AEC87 /* VibeMeter */ = {
+			isa = PBXGroup;
+			children = (
+				AA252968942E8CF4DB012AEB /* Assets.xcassets */,
+				CA469E269F48B0785B20D9E9 /* Info.plist */,
+				CAFB3CA44EF2347B0B8E7A64 /* VibeMeterApp.swift */,
+				2D30B629213341DFD25D3C49 /* Models */,
+				9E7651AEE79F70D2E2F90CB3 /* Providers */,
+				0615D57E050400827F1BD31E /* Services */,
+				C5B756EA7E494369FD657562 /* Views */,
+			);
+			path = VibeMeter;
+			sourceTree = "<group>";
+		};
+		9E7651AEE79F70D2E2F90CB3 /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				D731409A1192809EAB3D7F60 /* ClaudeUsageProvider.swift */,
+				7D68398CEE8650453EF5F9AB /* CodexUsageProvider.swift */,
+				B1503876C68403CAAB111153 /* UsageProvider.swift */,
+			);
+			path = Providers;
+			sourceTree = "<group>";
+		};
+		A12540925DD8B7FCE7E53E4F /* VibeMeterTests */ = {
+			isa = PBXGroup;
+			children = (
+				EBE1DDC0676C2424AD9A941F /* ClaudeUsageResponseTests.swift */,
+				E7E541D77C0306329D9F5CF8 /* CLILocatorTests.swift */,
+				7E8352BB1AA5EF40116E7304 /* CodexUsageResponseTests.swift */,
+				5B73D7CE0E760088D8302A2B /* LiveProviderTests.swift */,
+				27D2E36DD59FB1B8FE955752 /* UsageModelsTests.swift */,
+			);
+			path = VibeMeterTests;
+			sourceTree = "<group>";
+		};
+		C5B756EA7E494369FD657562 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B1C7A570605A1F136835CDAB /* MenuBarContentView.swift */,
+				965B3DF8BB3988E0AD8CD1B2 /* ProviderCardView.swift */,
+				391B9D4C0C94110960B66C27 /* SettingsView.swift */,
+				F6B2A2C1FD4CE96DDD9609BE /* UsageWindowRow.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D7FA9584940F21B6E833B3DB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A14E461D3BDDED51672F397C /* Security.framework */,
+				B03D020196783B1ED7DCFF2E /* ServiceManagement.framework */,
+				8A1F0EF09312407899AC4B34 /* UserNotifications.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E5CB89F2E4F7376BDEAAC2B6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1524D513A423821D19E5EEBD /* VibeMeter.app */,
+				3A7301B57D4797F0ECFD381A /* VibeMeterTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		228FD5EA55457DC688A60855 /* VibeMeter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE123DE2677D5A87AFB31B5D /* Build configuration list for PBXNativeTarget "VibeMeter" */;
+			buildPhases = (
+				50A08391899766C03587A977 /* Sources */,
+				528268A6F273DF32D0A2AEC2 /* Resources */,
+				7924F1620CAD1B4504B7ECD2 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VibeMeter;
+			packageProductDependencies = (
+			);
+			productName = VibeMeter;
+			productReference = 1524D513A423821D19E5EEBD /* VibeMeter.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B328617D7C587475648BFFA1 /* VibeMeterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 82159B6E0820C90E639C1563 /* Build configuration list for PBXNativeTarget "VibeMeterTests" */;
+			buildPhases = (
+				3EA6567BEA9575B22A7D57EB /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6F8E877BFD8C1D75DE0D91D5 /* PBXTargetDependency */,
+			);
+			name = VibeMeterTests;
+			packageProductDependencies = (
+			);
+			productName = VibeMeterTests;
+			productReference = 3A7301B57D4797F0ECFD381A /* VibeMeterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		154DF87AFB963C54CFADB1D9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 2600;
+				TargetAttributes = {
+					228FD5EA55457DC688A60855 = {
+						ProvisioningStyle = Automatic;
+					};
+					B328617D7C587475648BFFA1 = {
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 80DD8ADF5A7A51B60E4CCC62 /* Build configuration list for PBXProject "VibeMeter" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 4C0B004508A3295A54449422;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = E5CB89F2E4F7376BDEAAC2B6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				228FD5EA55457DC688A60855 /* VibeMeter */,
+				B328617D7C587475648BFFA1 /* VibeMeterTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		528268A6F273DF32D0A2AEC2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0AED0D58BF09BA9C4777C78 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3EA6567BEA9575B22A7D57EB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64BD31BAF4C179ADD0340886 /* CLILocatorTests.swift in Sources */,
+				37DE93EAFC473071DCE04BA4 /* ClaudeUsageResponseTests.swift in Sources */,
+				C643CF13D918FCDC68227E58 /* CodexUsageResponseTests.swift in Sources */,
+				8C394307C1424AE1AB5F3537 /* LiveProviderTests.swift in Sources */,
+				5B53BF3A4099AD219110263B /* UsageModelsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		50A08391899766C03587A977 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03C3E3AAE6CA1F2EB8F09D3B /* AppSettings.swift in Sources */,
+				48F3DD405C83783A99D4EA4C /* CLILocator.swift in Sources */,
+				C31C70617B2D0DC314FF1202 /* ClaudeUsageProvider.swift in Sources */,
+				F49E3187FEC556AA72331EAF /* CodexRPCProcess.swift in Sources */,
+				C608E0B188B0956C8061B1B1 /* CodexUsageProvider.swift in Sources */,
+				EED4A246A58D30EF1BDBD6D0 /* KeychainCredentialReader.swift in Sources */,
+				F90F9ED8A20C6AF73F17D1BB /* MenuBarContentView.swift in Sources */,
+				8D3087318B6CA87EEFC0E2F8 /* ProviderCardView.swift in Sources */,
+				819B7A58B22AEB7F9E22A5EA /* SettingsView.swift in Sources */,
+				C28C9653687118ACE0A11282 /* SnapshotStore.swift in Sources */,
+				626145AD4E4D1017B44E942B /* UsageAlertManager.swift in Sources */,
+				67F4513B76859BDDD663F6C5 /* UsageCoordinator.swift in Sources */,
+				1F5B930E33F941E140FFFBCD /* UsageModels.swift in Sources */,
+				2CF39F2EEFC2BBB4A8354F71 /* UsageProvider.swift in Sources */,
+				749FDE30308C68B65539E0EB /* UsageWindowRow.swift in Sources */,
+				6443B774EA0C57A85734383F /* VibeMeterApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6F8E877BFD8C1D75DE0D91D5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 228FD5EA55457DC688A60855 /* VibeMeter */;
+			targetProxy = 7CD5AEAC77CE044ED67B0283 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		298363856E2C24681F475817 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.ivansandev.vibemeter.tests;
+				SDKROOT = macosx;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VibeMeter.app/Contents/MacOS/VibeMeter";
+			};
+			name = Debug;
+		};
+		44512793688989664A0E7BEA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 0.1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 6.0;
+			};
+			name = Release;
+		};
+		4EBD85AA04B2D6B65CD5C505 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = VibeMeter/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.ivansandev.vibemeter;
+				PRODUCT_NAME = VibeMeter;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		5B27636E2975985308A203A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.ivansandev.vibemeter.tests;
+				SDKROOT = macosx;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VibeMeter.app/Contents/MacOS/VibeMeter";
+			};
+			name = Release;
+		};
+		671461005DD908FE8076F053 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = VibeMeter/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.ivansandev.vibemeter;
+				PRODUCT_NAME = VibeMeter;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		EE02AA1CEFEAFE3C358F21F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 0.1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		80DD8ADF5A7A51B60E4CCC62 /* Build configuration list for PBXProject "VibeMeter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE02AA1CEFEAFE3C358F21F7 /* Debug */,
+				44512793688989664A0E7BEA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		82159B6E0820C90E639C1563 /* Build configuration list for PBXNativeTarget "VibeMeterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				298363856E2C24681F475817 /* Debug */,
+				5B27636E2975985308A203A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		CE123DE2677D5A87AFB31B5D /* Build configuration list for PBXNativeTarget "VibeMeter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				671461005DD908FE8076F053 /* Debug */,
+				4EBD85AA04B2D6B65CD5C505 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 154DF87AFB963C54CFADB1D9 /* Project object */;
+}
