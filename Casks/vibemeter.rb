@@ -1,6 +1,6 @@
 cask "vibemeter" do
   version "0.1.0"
-  sha256 :no_check
+  sha256 "af8423bc045c74f5ecc73b0f060992b031e2450b2899a1d034c508a4bf7a11be"
 
   url "https://github.com/ivansandev/homebrew-vibemeter/releases/download/v#{version}/VibeMeter-#{version}.zip"
   name "VibeMeter"
