@@ -7,7 +7,7 @@ cask "vibemeter-ai-usage" do
   desc "Claude and Codex usage in the macOS menu bar"
   homepage "https://github.com/ivansandev/homebrew-vibemeter"
 
-  depends_on macos: ">= :sequoia"
+  depends_on macos: :sequoia
 
   app "VibeMeter.app"
 
