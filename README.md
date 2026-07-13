@@ -14,6 +14,9 @@ VibeMeter is a native macOS menu-bar app that shows remaining Claude and Codex s
 - Optional per-window low-usage alerts and launch at login
 - Partial operation when only one provider is installed or authenticated
 
+<img width="406" height="482" alt="Screenshot 2026-07-13 at 16 10 50" src="https://github.com/user-attachments/assets/1f0950b8-3efe-484f-bfa2-0ac1208e689e" />
+
+
 ## Requirements
 
 - macOS 15 or newer
